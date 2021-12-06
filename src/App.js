@@ -29,7 +29,7 @@ function App(props) {
           className="btn toggle-btn"
           aria-pressed="true">
           <span className="visually-hidden">Mostar </span>
-          <span>todas as</span>
+          <span>Todas</span>
           <span className="visually-hidden"> tarefas</span>
         </button>
         <button
@@ -38,7 +38,7 @@ function App(props) {
           aria-pressed="false">
           <span className="visually-hidden">Mostrar </span>
           <span className="visually-hidden"> tarefas</span>
-          <span>ativas</span>
+          <span>Ativas</span>
         </button>
         <button
           type="button"
@@ -46,7 +46,7 @@ function App(props) {
           aria-pressed="false">
           <span className="visually-hidden">Mostrar </span>
           <span className="visually-hidden"> tarefas</span>
-          <span>concluídas</span>
+          <span>Concluídas</span>
         </button>
       </div>
       <h2 id="list-heading">3 tarefas restantes</h2>
