@@ -1,6 +1,21 @@
-export default function Form() {
+import { useState } from "react";
+
+export default function Form({ addTask }) {
+  const [name, setName] = useState("");
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    if (!name) {
+      return;
+    }
+
+    addTask(name);
+    setName("");
+  };
+
   return (
-    <form>
+    <form onSubmit={handleSubmit}>
       <h2 className="label-wrapper">
         <label
           htmlFor="new-todo-input"
@@ -14,6 +29,8 @@ export default function Form() {
         className="input input__lg"
         name="text"
         autoComplete="off"
+        value={name}
+        onChange={(e) => setName(e.target.value)}
       />
       <button
         type="submit"

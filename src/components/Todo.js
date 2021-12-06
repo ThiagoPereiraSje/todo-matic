@@ -2,6 +2,8 @@ export default function Todo({
   name,
   completed = false,
   id,
+  toggleTaskCompleted,
+  deleteTask,
 }) {
   return (
     <li className="todo stack-small">
@@ -10,6 +12,7 @@ export default function Todo({
           id={id}
           type="checkbox"
           defaultChecked={completed}
+          onChange={() => toggleTaskCompleted(id)}
         />
         <label className="todo-label" htmlFor={id}>
           {name}
@@ -20,7 +23,10 @@ export default function Todo({
           Editar{" "}
           <span className="visually-hidden">{name}</span>
         </button>
-        <button type="button" className="btn btn__danger">
+        <button
+          type="button"
+          className="btn btn__danger"
+          onClick={() => deleteTask(id)}>
           Excluir{" "}
           <span className="visually-hidden">{name}</span>
         </button>
