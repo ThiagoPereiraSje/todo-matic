@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
+import usePrevious from "../hooks/usePrevious";
 
 export default function Todo({
   name,
@@ -8,8 +9,11 @@ export default function Todo({
   editTask,
   deleteTask,
 }) {
+  const editFieldRef = useRef(null);
+  const editButtonRef = useRef(null);
   const [isEditing, setEditing] = useState(false);
   const [newName, setNewName] = useState("");
+  const wasEditing = usePrevious(isEditing);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -17,6 +21,16 @@ export default function Todo({
     setNewName("");
     setEditing(false);
   };
+
+  useEffect(() => {
+    if (!wasEditing && isEditing) {
+      editFieldRef.current.focus();
+    }
+
+    if (wasEditing && !isEditing) {
+      editButtonRef.current.focus();
+    }
+  }, [wasEditing, isEditing]);
 
   const editingTemplate = (
     <form className="stack-small" onSubmit={handleSubmit}>
@@ -30,6 +44,7 @@ export default function Todo({
           type="text"
           value={newName}
           onChange={(e) => setNewName(e.target.value)}
+          ref={editFieldRef}
         />
       </div>
       <div className="btn-group">
@@ -71,7 +86,8 @@ export default function Todo({
         <button
           type="button"
           className="btn"
-          onClick={() => setEditing(true)}>
+          onClick={() => setEditing(true)}
+          ref={editButtonRef}>
           Editar{" "}
           <span className="visually-hidden">{name}</span>
         </button>
