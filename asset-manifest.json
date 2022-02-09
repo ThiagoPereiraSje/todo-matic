@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/todo-matic/static/css/main.b7a7b150.chunk.css",
+    "main.js": "/todo-matic/static/js/main.50b978b3.chunk.js",
+    "main.js.map": "/todo-matic/static/js/main.50b978b3.chunk.js.map",
+    "runtime-main.js": "/todo-matic/static/js/runtime-main.6e630177.js",
+    "runtime-main.js.map": "/todo-matic/static/js/runtime-main.6e630177.js.map",
+    "static/js/2.f2ec2a9e.chunk.js": "/todo-matic/static/js/2.f2ec2a9e.chunk.js",
+    "static/js/2.f2ec2a9e.chunk.js.map": "/todo-matic/static/js/2.f2ec2a9e.chunk.js.map",
+    "static/js/3.e875db5e.chunk.js": "/todo-matic/static/js/3.e875db5e.chunk.js",
+    "static/js/3.e875db5e.chunk.js.map": "/todo-matic/static/js/3.e875db5e.chunk.js.map",
+    "index.html": "/todo-matic/index.html",
+    "static/css/main.b7a7b150.chunk.css.map": "/todo-matic/static/css/main.b7a7b150.chunk.css.map",
+    "static/js/2.f2ec2a9e.chunk.js.LICENSE.txt": "/todo-matic/static/js/2.f2ec2a9e.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.6e630177.js",
+    "static/js/2.f2ec2a9e.chunk.js",
+    "static/css/main.b7a7b150.chunk.css",
+    "static/js/main.50b978b3.chunk.js"
+  ]
+}
